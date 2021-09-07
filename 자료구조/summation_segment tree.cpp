@@ -1,4 +1,4 @@
-//비재귀 세그먼트 트리
+//bottom-up 세그먼트 트리
 // 선형자료에 대해 구간합,구간곱,구간최대 구간 최소등을 logN 만에 구할 수 있다. 
 #include<iostream>
 #include<vector>
