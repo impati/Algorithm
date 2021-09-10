@@ -16,7 +16,7 @@ void dfs(int v) {
 	visit[v] = true;
 	for (auto &nxt : adj[v]) {
 		if (visit[nxt])continue;
-		if (!finish[nxt]) {
+		else if (finish[nxt]) {
 			cycle = true; continue;
 		}
 		dfs(nxt);
@@ -25,16 +25,16 @@ void dfs(int v) {
 	st.push(v);
 }
 int main() {
-	int n;
-	cin >> n;
+	int n,m;
+	cin >> n>>m;
 	//순서정보입력받는다.
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < m; i++) {
 		int v1, v2;
 		cin >> v1 >> v2;
 		//v1이 v2보다 먼저 와야한다.
 		adj[v1].push_back(v2);
 	}
-	for (int i = 0; i < n; i++) {
+	for (int i = 1; i <= n; i++) {
 		if (!visit[i])dfs(i);
 	}
 	//위상정렬.
