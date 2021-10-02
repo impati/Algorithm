@@ -6,7 +6,7 @@
 #include<map>
 #include<queue>
 #include<stack>
-#define SIZE 2111
+#define SIZE 211
 #define INF 987654321
 #define fastio ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 using namespace std;
